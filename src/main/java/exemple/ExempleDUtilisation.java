@@ -57,5 +57,14 @@ public class ExempleDUtilisation {
         monBandeau.setMessage("Terminé");
         monBandeau.sleep(3000);
         monBandeau.close();
+
+        Bandeau bandeau = new Bandeau();
+
+        Scenario scenario = new Scenario();
+        scenario.ajouterEffet(new Clignotant(5), 3);
+        scenario.ajouterEffet(new JeuDuPendu(), 5);
+        scenario.ajouterEffet(new Zoom(50), 2);
+
+        scenario.afficherBandeau(bandeau);
     }
 }
